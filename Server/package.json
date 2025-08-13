@@ -7,8 +7,8 @@
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
-  "start": "node main.js",
-  "dev": "nodemon main.js"
+  "start": "node Server/main.js",
+  "dev": "nodemon Server/main.js"
 },
   "dependencies": {
     "body-parser": "^2.2.0",
