@@ -1,5 +1,7 @@
 {
-  "dependencies": {
-    "git": "^0.1.5"
+  "name": "my-ecommerce-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node Server/main.js"
   }
 }
