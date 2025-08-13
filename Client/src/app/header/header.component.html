@@ -1,0 +1,32 @@
+<div id="section1">
+    <a href="index.html"><img id="logo-img" [src]="logoimg" alt="Logo"></a>
+    <div class="search-container">
+        <img id="search-icon" [src]="searchimg" alt="Search">
+        <input type="text" placeholder="חפש כאן..." aria-label="Search">
+    </div>
+
+    <nav>
+
+        <div *ngIf="loggedInUserName" id="profile-link">
+            <a routerLink="/profile" aria-label="Profile">
+                <img id="profile-img" src="./profile.png" alt="profile">
+            </a>
+        </div>
+
+        <div *ngIf="!loggedInUserName" id="login-link">
+            <a routerLink="/login" aria-label="Login">
+                <img id="login-img" src="./login4.png" alt="Login">
+            </a>
+        </div>
+        <div id="cart-link">
+            <a routerLink="/cart" aria-label="Shopping Cart">
+
+                <img id="cart-img" [src]="cartimg" alt="Shopping Cart">
+            </a>
+        </div>
+
+    </nav>
+
+</div>
+
+<div id="placeholder"></div>

@@ -1,0 +1,9 @@
+<div class="cart-summary">
+    <h3>סיכום הזמנה</h3>
+    <p>סה"כ פריטים: <span>{{ totalItems }}</span></p>
+    <p>סה"כ לתשלום: <span>{{ totalPrice | currency:'ILS':'symbol':'1.2-2' }}</span></p>
+    <div class="summary-actions">
+        <button class="clear-cart-btn" (click)="onClear()">רוקן עגלה</button>
+        <button class="checkout-btn" (click)="onCheckout()">מעבר לתשלום</button>
+    </div>
+</div>

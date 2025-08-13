@@ -1,0 +1,43 @@
+<!-- src/app/order-confirmation/order-confirmation.component.html -->
+<div class="order-confirmation-container">
+  <div *ngIf="isLoading" class="loading-message">
+    טוען סיכום הזמנה...
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div class="order-summary-content" *ngIf="!isLoading && order">
+    <h2>הזמנה אושרה!</h2>
+    <p class="success-message">הזמנתך התקבלה בהצלחה!</p>
+
+    <div class="order-details-card">
+      <h3>פרטי הזמנה:</h3>
+      <p><strong>מספר הזמנה:</strong> {{ order.order_id }}</p>
+      <p><strong>תאריך הזמנה:</strong> {{ order.order_date | date:'medium' }}</p>
+      <p><strong>סה"כ לתשלום:</strong> {{ order.total_amount | currency:'ILS':'symbol':'1.2-2' }}</p>
+      <p><strong>סטטוס:</strong> {{ order.status }}</p>
+    </div>
+
+    <div class="order-items-list-card">
+      <h3>פריטים שהוזמנו:</h3>
+      <ul class="order-items-ul">
+        <li *ngFor="let item of order.orderItems" class="order-item-li">
+          <div class="item-product-info">
+            <img [src]="item.product?.image_url || 'https://placehold.co/50x50?text=No+Image'"
+                 alt="{{ item.product?.title }}" class="order-item-image">
+            <div class="item-details-text">
+              <span class="item-title">{{ item.product?.title }}</span>
+              <span class="item-quantity">כמות: {{ item.quantity }}</span>
+              <span class="item-price">מחיר ליחידה: {{ item.price_at_purchase | currency:'ILS':'symbol':'1.2-2' }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <p class="thank-you-message">תודה רבה על רכישתך!</p>
+    <button (click)="goToHomepage()" class="continue-shopping-btn">המשך קניות</button>
+  </div>
+</div>

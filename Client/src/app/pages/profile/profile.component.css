@@ -1,0 +1,186 @@
+/* src/app/pages/profile/profile.component.css */
+.profile-container {
+  direction: rtl; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: calc(100vh - 80px); 
+  padding: 20px;
+  padding-top: 100px; 
+  background-color: #f5f7fa; 
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  color: #333;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; 
+  text-align: center;
+}
+
+.profile-title {
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.profile-info {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: baseline;
+  gap: 10px;
+  width: fit-content;
+  
+}
+
+.profile-info strong {
+  color: #555;
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.profile-info .profile-value {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between buttons */
+}
+
+.profile-actions img {
+  width: 23px;
+  /* כדי שהתמונה תהיה מיושרת לאותו קו בסיס כמו הטקסט */
+  vertical-align: middle;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-button .button-text { 
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+.action-button .icon { 
+  font-size: 1.2em;
+}
+
+.action-button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.action-button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.action-button.secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(108, 117, 125, 0.3);
+}
+
+.action-button.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-button.danger:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
+}
+
+.not-logged-in-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin-top: 50px;
+  color: #856404;
+}
+
+.not-logged-in-message p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 20px;
+    margin: 0 15px;
+  }
+  .profile-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .profile-info p {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    width: 100%;
+  }
+  .profile-info strong {
+    min-width: unset;
+    text-align: right;
+    width: 100%;
+  }
+  .profile-info .profile-value {
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 15px;
+  }
+  .profile-title {
+    font-size: 1.8em;
+  }
+  .profile-info {
+    font-size: 1em;
+  }
+  .action-button {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+}

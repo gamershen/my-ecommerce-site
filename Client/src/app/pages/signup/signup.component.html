@@ -1,0 +1,29 @@
+
+<div class="login-container">
+    <form (ngSubmit)="onSignup()">
+        <h2>הרשמה</h2>
+
+        <div class="form-group">
+            <label for="username">שם משתמש:</label>
+            <input type="text" id="username" name="username"
+                placeholder="הזן את שמך" required
+                [(ngModel)]="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email"
+                placeholder="הזן את המייל שלך" required
+                [(ngModel)]="email">
+        </div>
+
+        <div class="form-group">
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password"
+                placeholder="הזן את הסיסמה שלך" required
+                [(ngModel)]="password">
+        </div>
+
+        <button type="submit">הירשם</button>
+    </form>
+</div>

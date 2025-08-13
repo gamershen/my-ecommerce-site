@@ -1,0 +1,40 @@
+<!-- Display loading message while product data is being fetched -->
+<div *ngIf="loading && !errorMessage" class="loading-message">
+    טוען פרטי מוצר...
+</div>
+
+<!-- Display general error message if fetching fails -->
+<div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+</div>
+
+<!-- Render product details ONLY if 'product' object is not null/undefined and no general error -->
+<div class="product-detail-container" *ngIf="product && !loading && !errorMessage">
+    <div class="product-image">
+        <!-- Safely access product properties using 'product?' or with *ngIf guard -->
+        <h1 class="product-title">{{ product.title || 'Product Title' }}</h1>
+        <img [src]="product.image_url || 'https://via.placeholder.com/400'"
+             alt="{{ product.title }}">
+        <div class="product-actions">
+            <label for="quantity-input">כמות:</label>
+            <input
+                type="number"
+                id="quantity-input"
+                [(ngModel)]="quantity"
+                min="1"
+                class="quantity-input"
+            >
+            <button (click)="addToCart()" class="add-to-cart-btn">הוסף לעגלה</button>
+        </div>
+    </div>
+    <div class="product-info">
+        <div class="product-description"
+             [innerHTML]="product.description || 'אין תיאור זמין.'"></div>
+        <div class="product-price">
+            <span>מחיר:</span> {{ product.price | currency:'ILS':'symbol':'1.2-2' }}
+        </div>
+
+        <!-- Display messages related to the add-to-cart action -->
+        <div *ngIf="message" class="message">{{ message }}</div>
+    </div>
+</div>

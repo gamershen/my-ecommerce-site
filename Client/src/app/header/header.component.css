@@ -1,0 +1,165 @@
+* {
+    direction: rtl;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Varela Round', 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+
+}
+
+/* Header */
+#section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    padding-right: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.user-greeting {
+    font-weight: bold;
+    margin-right: -105px;
+}
+
+#logo-img {
+    width: 80px;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#search-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 88%;
+}
+
+.search-container input {
+    padding: 8px 16px;
+    border: 2px solid #007bff;
+    width: 250px;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+.search-container input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Nav Icons */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: auto;
+
+}
+
+#cart-img {
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+nav img:hover {
+    transform: scale(1.2);
+}
+
+/* Header spacer */
+#placeholder {
+    height: 80px;
+}
+
+.logout-btn {
+    padding: 8px 10px;
+    background-color: #eb0c0c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #eb0c0c;
+}
+
+
+/* Media Query for smaller screens (e.g., less than 768px wide) */
+@media (max-width: 768px) {
+    nav {
+        /* Adjust the gap or use padding/margin on individual items */
+        gap: 20px;
+        /* Make the gap smaller if desired */
+    }
+
+    /* Target the Cart Button */
+    #cart-img {
+        /* Shift to the right relative to its original position */
+        margin-right: 0px;
+        /* Negative margin pulls it further right (in RTL) */
+        /* Or use position: relative and right/left */
+        /* position: relative; */
+        /* right: -10px; */
+    }
+
+    /* Target the Login Button (assuming it has an ID #login-img, or adjust selector) */
+    /* If your login is another nav img, give it a unique ID or target it carefully */
+    #login-img {
+        /* Replace with your actual login button's ID or class */
+        /* Shift to the left relative to its original position */
+        margin-right: 15px;
+        /* Negative margin pulls it further left (in RTL) */
+        /* Or use position: relative and right/left */
+        /* position: relative; */
+        /* left: -10px; */
+    }
+
+    .user-greeting {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        margin-right: -20px;
+        gap: 50px;
+    }
+
+    .search-container input {
+    padding: 8px 16px;
+    border: 2px solid #007bff;
+    width: 200px;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+}

@@ -1,0 +1,34 @@
+<div class="cart-container">
+    <h2>עגלת הקניות שלך</h2>
+
+    <div *ngIf="loading" class="loading-message">
+        טוען עגלה...
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+    <div *ngIf="!loading && cartItems.length === 0 && !errorMessage" class="empty-cart-message">
+        העגלה שלך ריקה.
+    </div>
+
+    <div class="cart-content" *ngIf="!loading && cartItems.length > 0">
+        <div class="cart-items-list">
+           
+            <app-cart-item
+                *ngFor="let item of cartItems; let i = index"
+                [cartItem]="item"
+                (removeItem)="onRemoveItem(item.id)"
+                (quantityChange)="onQuantityChange(item.id, $event)"
+            ></app-cart-item>
+        </div>
+
+        <app-cart-summary
+            [totalItems]="totalItems"
+            [totalPrice]="totalPrice"
+            (clearCart)="clearCart()"
+            (checkout)="onCheckout()"
+        ></app-cart-summary>
+    </div>
+</div>

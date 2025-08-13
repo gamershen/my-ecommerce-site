@@ -1,0 +1,107 @@
+* {
+    direction: rtl;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#section2 {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9fbff;
+}
+
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+  
+#myCarousel {
+  max-width: 1300px;
+  height: 395px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#myCarousel .item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Products Section */
+#section3 {
+    padding: 60px 30px;
+    background-color: #ffffff;
+}
+
+#section3 h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #007bff;
+}
+
+#selected-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px; /* set a fixed height or based on your design */
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-item.active {
+  position: relative;
+  opacity: 1;
+  
+  pointer-events: auto;
+}
+
+
+
+.carousel-item img {
+  width: 100%;
+  height: 100%; /* This forces it to fill the height */
+  object-fit:cover; /* This makes it crop if aspect ratio doesn't match */
+}
+.carousel-inner {
+  height: 400px; /* This sets the parent's height */
+}
+
+.carousel-indicators {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+

@@ -1,0 +1,17 @@
+<div id="section3">
+
+    <h3>מוצרים נבחרים</h3>
+   <div class="selected-items">
+  <div class="item" *ngFor="let product of products">
+    <div class="card">
+      <div class="image-container">
+        <a [routerLink]="['/product', product.id]" aria-label="tv">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        </a>
+      </div>
+      <div class="card-body">
+        <h4>{{ product.name }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

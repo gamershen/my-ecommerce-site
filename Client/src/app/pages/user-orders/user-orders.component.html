@@ -1,0 +1,43 @@
+<!-- src/app/pages/user-orders/user-orders.component.html -->
+<div class="user-orders-container">
+  <h2 class="page-title">ההזמנות שלי</h2>
+
+  <div *ngIf="isLoading" class="loading-message">
+    טוען היסטוריית הזמנות...
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage">
+    <div *ngIf="userOrders.length === 0; else ordersGrid" class="no-orders-message">
+      אין לך הזמנות קודמות בחשבון זה.
+    </div>
+
+    <ng-template #ordersGrid>
+      <div class="orders-grid">
+        <div *ngFor="let order of userOrders" class="order-card" tabindex="0"
+             role="listitem" [attr.aria-labelledby]="'order-title-' + order.order_id"> <!-- FIX: Used [attr.aria-labelledby] -->
+          <div class="card-header">
+            <h3 id="order-title-{{order.order_id}}">הזמנה #{{ order.order_id }}</h3>
+            <span class="order-status" [style.backgroundColor]="orderStatusColors[order.status]">
+              {{ order.status }}
+            </span>
+          </div>
+          <div class="card-body">
+            <p><strong>תאריך הזמנה:</strong> {{ order.order_date | date:'shortDate' }}</p>
+            <p><strong>סה"כ:</strong> {{ order.total_amount | currency:'ILS':'symbol':'1.2-2' }}</p>
+          </div>
+          <div class="card-footer">
+            <button (click)="viewOrderDetails(order.order_id)" class="details-button"
+                    [attr.aria-label]="getAriaLabelForOrderDetails(order.order_id)">
+              צפה בפרטים מלאים
+              <span class="icon-arrow" aria-hidden="true">&#x2190;</span> <!-- חץ שמאלה עבור RTL -->
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div id="section2">
+  <h3>מבצעים</h3>
+
+  <div id="myCarousel" class="carousel slide" [attr.data-ride]="'carousel'">
+    <ol class="carousel-indicators">
+      <li *ngFor="let slide of slides; let i = index"
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"
+          [attr.data-slide-to]="i"
+          [attr.data-target]="'#myCarousel'">
+      </li>
+    </ol>
+    
+    <div class="carousel-inner">
+      <div *ngFor="let slide of slides; let i = index"
+           class="carousel-item"
+           [class.active]="i === currentSlide">
+        <img [src]="slide.src" [alt]="slide.alt" />
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" role="button" (click)="previousSlide()">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" role="button" (click)="nextSlide()">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

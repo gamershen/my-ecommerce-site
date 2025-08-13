@@ -1,0 +1,41 @@
+<!-- src/app/pages/profile/profile.component.html -->
+<div class="profile-container">
+  <div *ngIf="currentUser; else notLoggedIn" class="profile-card">
+    <h2 class="profile-title">הפרופיל שלי</h2>
+
+    <div class="profile-info">
+      <p><strong>שם משתמש:</strong> <span class="profile-value">{{ currentUser.name }}</span></p>
+      <p><strong>אימייל:</strong> <span class="profile-value">{{ currentUser.email }}</span></p>
+      <p><strong>סיסמה:</strong> <span class="profile-value">*********</span></p> <!-- סיסמה מוסתרת -->
+      <!-- ניתן להוסיף כאן מידע נוסף אם קיים במודל המשתמש -->
+      <!-- לדוגמה, אם יש לך תאריך יצירת חשבון: -->
+      <!-- <p *ngIf="currentUser.createdAt"><strong>תאריך הצטרפות:</strong> <span class="profile-value">{{ currentUser.createdAt | date:'shortDate' }}</span></p> -->
+    </div>
+
+    <div class="profile-actions">
+      <button (click)="goToMyOrders()" class="action-button primary">
+        <img id="order-img" src="order.png" alt="הזמנות קודמות">
+        <span class="button-text">ההזמנות הקודמות שלי</span> <!-- FIX: Wrapped text in span -->
+      </button>
+      <!-- <button (click)="editProfile()" class="action-button secondary">
+        <span class="icon">&#9998;</span> 
+        <span class="button-text">ערוך פרופיל</span>
+      </button>
+      <button (click)="changePassword()" class="action-button secondary">
+        <img id="password" src="reset-password.png" alt="שנה סיסמה">
+        <span class="button-text">שנה סיסמה</span> 
+      </button> -->
+      <button (click)="logout()" class="action-button danger">
+        <img id="logout" src="logout.png" alt="התנתק">
+        <span class="button-text">התנתק</span> <!-- FIX: Wrapped text in span -->
+      </button>
+    </div>
+  </div>
+
+  <ng-template #notLoggedIn>
+    <div class="not-logged-in-message">
+      <p>אנא התחבר כדי לצפות בפרופיל שלך.</p>
+      <button (click)="router.navigate(['/login'])" class="action-button primary">התחבר</button>
+    </div>
+  </ng-template>
+</div>
