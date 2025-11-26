@@ -37,6 +37,9 @@ product_categories (optional many-to-many)	Connects products to multiple categor
 
 <img width="1918" height="876" alt="image" src="https://github.com/user-attachments/assets/2f787478-3cb9-4162-a1e6-178a8e007906" />
 
+<img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/71d15295-428d-4655-a880-6021a49d3368" />
+
+
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/2eed5bb2-96d9-4a68-8589-0143d524033a" />
 
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/e9a55ecd-5ba0-4c11-9ff2-9caa96043684" />
