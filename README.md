@@ -7,11 +7,11 @@ The goal of this project is to design a scalable architecture using Angular on t
 
 ## 🚀 Features
 
-✔️ User registration & login
-✔️ Product listing & searching
-✔️ Shopping cart system
-✔️ Order placement & history
-✔️ Inventory tracking
+✔️ User registration & login                                                                                                                                                                                         
+✔️ Product listing & searching                                                                                                                                                                                       
+✔️ Shopping cart system                                                                                                                                                                                      
+✔️ Order placement & history                                                                                                                                                                                      
+✔️ Inventory tracking                                                                                                                                                                                      
 ✔️ Database relationships (including many-to-many)
 
 ## 🧱 System Architecture
@@ -47,14 +47,8 @@ npm install
 # Run the development server
 ng serve
 
-📍 Future Plans
 
-🔹 Admin dashboard (manage products, inventory, and orders)
-🔹 Payment gateway simulation
-🔹 Order shipping status
-🔹 Email notifications
-
-👤 Author
+# 👤 Author
 
 Shen (Netanel)
 Software Engineering Student, learning Angular, databases, and full-stack development in a real project.
