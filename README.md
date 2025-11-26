@@ -33,46 +33,6 @@ order_items	Stores purchased products per order
 product_categories (optional many-to-many)	Connects products to multiple category tags
 🗂️ Order & Order Items Flow
 
-orders stores the order metadata (who bought it, when, status, total).
-
-order_items stores each individual product in the order, including quantity and price at purchase time.
-
-Example:
-
-Order ID	User	Total	Status
-12	user#3	$120.97	Paid
-
-Order Items:
-
-order_id	product_id	quantity	price_per_unit_at_purchase
-12	5	1	29.99
-12	7	2	44.99
-⚙️ Current Project Status
-
- Database structure planned
-
- Angular project initialized
-
- Backend API setup
-
- Authentication system
-
- UI components (home, product list, cart, checkout)
-
- Deployment
-
-##🏗️ Project Structure (Frontend)
-/src/app
-  ├── components
-  │     ├── navbar
-  │     ├── product-card
-  │     ├── cart-icon
-  ├── pages
-  │     ├── home
-  │     ├── cart
-  │     ├── checkout
-  │     ├── product-details
-
 🛠️ Setup Instructions
 
 Backend setup coming soon — frontend installation available.
