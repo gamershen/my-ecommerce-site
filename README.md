@@ -1,11 +1,11 @@
-🛒 E-Commerce Web Application
+# 🛒 E-Commerce Web Application
 
 This project is a full-stack e-commerce web application designed to simulate a modern online shopping experience.
 It includes user authentication, product browsing, cart management, order processing, and inventory tracking.
 
 The goal of this project is to design a scalable architecture using Angular on the frontend and a backend server (Node/Express planned) with a relational database.
 
-🚀 Features
+## 🚀 Features
 
 ✔️ User registration & login
 ✔️ Product listing & searching
@@ -14,7 +14,7 @@ The goal of this project is to design a scalable architecture using Angular on t
 ✔️ Inventory tracking
 ✔️ Database relationships (including many-to-many)
 
-🧱 System Architecture
+## 🧱 System Architecture
 Layer	Technology	Purpose
 Frontend	Angular	UI, routing, forms, components
 Backend	Node.js + Express (planned)	API, authentication, business logic
@@ -61,7 +61,7 @@ order_id	product_id	quantity	price_per_unit_at_purchase
 
  Deployment
 
-🏗️ Project Structure (Frontend)
+##🏗️ Project Structure (Frontend)
 /src/app
   ├── components
   │     ├── navbar
