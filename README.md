@@ -33,19 +33,15 @@ order_items	Stores purchased products per order
 product_categories (optional many-to-many)	Connects products to multiple category tags
 🗂️ Order & Order Items Flow
 
-🛠️ Setup Instructions
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f50104a6-5d0a-41cf-b065-de7ae8387b41" />
 
-Backend setup coming soon — frontend installation available.
+<img width="1918" height="876" alt="image" src="https://github.com/user-attachments/assets/2f787478-3cb9-4162-a1e6-178a8e007906" />
 
-# Clone the repo
-git clone https://github.com/<USERNAME>/<REPO-NAME>
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/2eed5bb2-96d9-4a68-8589-0143d524033a" />
 
-# Install dependencies
-cd project-folder
-npm install
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/e9a55ecd-5ba0-4c11-9ff2-9caa96043684" />
 
-# Run the development server
-ng serve
+
 
 
 # 👤 Author
