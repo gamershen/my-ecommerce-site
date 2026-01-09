@@ -1,25 +1,25 @@
-# 🛒 E-Commerce Web Application
+#  E-Commerce Web Application
 
 This project is a full-stack e-commerce web application designed to simulate a modern online shopping experience.
 It includes user authentication, product browsing, cart management, order processing, and inventory tracking.
 
 The goal of this project is to design a scalable architecture using Angular on the frontend and a backend server (Node/Express planned) with a relational database.
 
-## 🚀 Features
+##  Features
 
-✔️ User registration & login                                                                                                                                                                                         
-✔️ Product listing & searching                                                                                                                                                                                       
-✔️ Shopping cart system                                                                                                                                                                                      
-✔️ Order placement & history                                                                                                                                                                                      
-✔️ Inventory tracking                                                                                                                                                                                      
-✔️ Database relationships (including many-to-many)
+ User registration & login                                                                                                                                                                                         
+ Product listing & searching                                                                                                                                                                                       
+ Shopping cart system                                                                                                                                                                                      
+ Order placement & history                                                                                                                                                                                      
+ Inventory tracking                                                                                                                                                                                      
+ Database relationships (including many-to-many)
 
-## 🧱 System Architecture
+##  System Architecture
 Layer	Technology	Purpose
 Frontend	Angular	UI, routing, forms, components
 Backend	Node.js + Express (planned)	API, authentication, business logic
 Database	MySQL	Persistent storage for users, products, orders, inventory, etc.
-📦 Database Schema
+ Database Schema
 
 This project contains five core tables to support all major features:
 
@@ -31,7 +31,7 @@ cart_items	Items inside a user’s cart (many-to-many: users ⇄ products throug
 orders	Tracks completed checkouts
 order_items	Stores purchased products per order
 product_categories (optional many-to-many)	Connects products to multiple category tags
-🗂️ Order & Order Items Flow
+ Order & Order Items Flow
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f50104a6-5d0a-41cf-b065-de7ae8387b41" />
 
